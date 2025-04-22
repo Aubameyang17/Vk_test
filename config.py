@@ -1,3 +1,4 @@
-BASE_URL = "http://localhost:8065/at--t/v4"
-USERNAME = "alex"
-PASSWORD = "1"
+BASE_URL = "http://localhost:8065/api/v4"
+USERNAME = "Ar1517"
+PASSWORD = "SQLSETTINGS_DATASOURCE"
+

@@ -1,3 +1,5 @@
+import logging
+
 import pytest
 import requests
 from config import BASE_URL, USERNAME, PASSWORD
@@ -10,3 +12,6 @@ def auth_token():
     )
     assert response.status_code == 200, "Не удалось авторизоваться"
     return response.headers["Token"]
+
+def pytest_configure(config):
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
