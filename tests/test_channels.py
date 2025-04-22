@@ -10,8 +10,8 @@ def test_create_channel(auth_token):
     team_id = get_team_id_by_name(auth_token, "at--t")
     data = {
         "team_id": team_id,
-        "name": "anotherchannel",
-        "display_name": "Tanotherchannel",
+        "name": "afgdsdf",
+        "display_name": "sfsdfsdfsdf",
         "type": "O"  # O = public, P = private
     }
     res = requests.post(f"{BASE_URL}/channels", json=data, headers=headers)
