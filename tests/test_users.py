@@ -1,11 +1,14 @@
 import requests
 from config import BASE_URL
+from utils import get_user_id_by_username, get_channel_id_by_name, get_team_id_by_name
+
 
 def test_add_user_to_channel(auth_token):
     headers = {"Authorization": f"Bearer {auth_token}"}
 
     channel_id = "gatb3wsk4jnnmnrzey11jcw4ay"
-    user_id = "user_id_to_add"
+    user_id = get_user_id_by_username(auth_token, "alex")
+
 
     res = requests.post(
         f"{BASE_URL}/channels/{channel_id}/members",

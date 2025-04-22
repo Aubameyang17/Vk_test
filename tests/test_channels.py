@@ -1,10 +1,12 @@
 import requests
 from config import BASE_URL
+from utils import get_user_id_by_username, get_channel_id_by_name, get_team_id_by_name
 
 def test_create_channel(auth_token):
     headers = {"Authorization": f"Bearer {auth_token}"}
+    team_id = get_team_id_by_name(auth_token, "myteam")
     data = {
-        "team_id": "at & t",
+        "team_id": team_id,
         "name": "testchannel",
         "display_name": "Test Channel",
         "type": "O"  # O = public, P = private
