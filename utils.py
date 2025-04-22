@@ -3,9 +3,6 @@ from config import BASE_URL
 
 
 def get_user_id_by_username(token: str, username: str) -> str:
-    """
-    Получить user_id по логину пользователя
-    """
     headers = {"Authorization": f"Bearer {token}"}
     response = requests.get(f"{BASE_URL}/users/username/{username}", headers=headers)
 
@@ -16,9 +13,6 @@ def get_user_id_by_username(token: str, username: str) -> str:
 
 
 def get_channel_id_by_name(token: str, team_id: str, channel_name: str) -> str:
-    """
-    Получить channel_id по имени канала и team_id
-    """
     headers = {"Authorization": f"Bearer {token}"}
     response = requests.get(
         f"{BASE_URL}/teams/{team_id}/channels/name/{channel_name}",
@@ -32,9 +26,6 @@ def get_channel_id_by_name(token: str, team_id: str, channel_name: str) -> str:
 
 
 def get_team_id_by_name(token: str, team_name: str) -> str:
-    """
-    Получить team_id по имени команды
-    """
     headers = {"Authorization": f"Bearer {token}"}
     response = requests.get(f"{BASE_URL}/teams/name/{team_name}", headers=headers)
 

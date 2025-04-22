@@ -7,7 +7,6 @@ def test_post_message(auth_token):
     logger.info("Шаг 7: отправка сообщений")
     headers = {"Authorization": f"Bearer {auth_token}"}
 
-    # Здесь подставь корректный channel_id
     channel_id = "qcm6ff3yotnr3pghooyyoniexw"
 
     res = requests.post(f"{BASE_URL}/posts", json={
